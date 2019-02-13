@@ -123,6 +123,8 @@ class GoogleCloudStorageToBigQueryOperator(BaseOperator):
         time_partitioning. The order of columns given determines the sort order.
         Not applicable for external tables.
     :type cluster_fields: list[str]
+    :param autodetect: Attempt to autodetect the schema for CSV and JSON source files.
+    :type cluster_fields: bool
     """
     template_fields = ('bucket', 'source_objects',
                        'schema_object', 'destination_project_dataset_table')
